@@ -134,7 +134,7 @@ function DailyLogMockup() {
                       style={{
                         height: `${bar <= item.level ? 8 + bar * 4 : 8}px`,
                         backgroundColor:
-                          bar <= item.level ? item.color : "#E8E3DC",
+                          bar <= item.level ? item.color : "#DDD0BC",
                         opacity: bar <= item.level ? 1 : 1,
                       }}
                     />
@@ -194,7 +194,7 @@ function DailyLogMockup() {
         </div>
 
         {/* AI Insight */}
-        <div className="px-5 py-4 bg-[#FDF8F5]">
+        <div className="px-5 py-4 bg-[#FFFDF6]">
           <div className="flex items-start gap-3">
             <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
               <div className="w-2 h-2 rounded-full bg-primary" />

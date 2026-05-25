@@ -10,25 +10,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#F7F4F0",
+        bg: "#FFFDF6",
         surface: "#FFFFFF",
-        border: "#E8E3DC",
+        border: "#DDD0BC",
         primary: {
-          DEFAULT: "#7A1E2E",
-          hover: "#5E1622",
+          DEFAULT: "#58021A",
+          hover: "#400014",
         },
         cta: {
           DEFAULT: "#C8730A",
           hover: "#A65E08",
         },
         ink: {
-          DEFAULT: "#1A1410",
-          muted: "#7A6F65",
-          inverse: "#F7F4F0",
+          DEFAULT: "#392514",
+          muted: "#896E5A",
+          inverse: "#FFFDF6",
         },
         dark: {
-          DEFAULT: "#1C1410",
-          surface: "#261C17",
+          DEFAULT: "#392514",
+          surface: "#4B2E15",
         },
         caregiver: {
           DEFAULT: "#C2570A",
@@ -65,9 +65,9 @@ const config: Config = {
         "4xl": "2rem",
       },
       boxShadow: {
-        card: "0 4px 24px rgba(26, 20, 16, 0.04)",
-        "card-hover": "0 16px 40px rgba(26, 20, 16, 0.08)",
-        nav: "0 1px 0 rgba(26, 20, 16, 0.06)",
+        card: "0 4px 24px rgba(57, 37, 20, 0.07)",
+        "card-hover": "0 16px 40px rgba(57, 37, 20, 0.14)",
+        nav: "0 1px 0 rgba(57, 37, 20, 0.10)",
       },
       keyframes: {
         fadeUp: {
