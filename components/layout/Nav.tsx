@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -34,13 +35,15 @@ export function Nav() {
     >
       <div className="container-width flex items-center justify-between h-16 md:h-18">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="font-serif text-xl text-primary leading-none">
-            Spectr<span className="text-cta">A</span>ble
-          </span>
-          <span className="text-label text-ink-muted uppercase tracking-widest hidden sm:block">
-            by Kokum Assist
-          </span>
+        <Link href="/" className="flex items-center shrink-0">
+          <Image
+            src="/logo.svg"
+            alt="SpectrAble"
+            width={140}
+            height={36}
+            priority
+            className="h-9 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
