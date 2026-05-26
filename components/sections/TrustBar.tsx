@@ -1,8 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import { ExternalLink } from "lucide-react";
 
 const TRUST_ITEMS = [
@@ -13,8 +8,8 @@ const TRUST_ITEMS = [
     external: true,
   },
   {
-    label: "Google Cloud for Startups",
-    sub: "Program member",
+    label: "MVP Tested at ABA Clinics",
+    sub: "Beta validated",
     href: null,
   },
   {
@@ -34,57 +29,54 @@ const TRUST_ITEMS = [
   },
 ];
 
-export function TrustBar() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+function TrustItem({ item }: { item: (typeof TRUST_ITEMS)[number] }) {
+  const content = (
+    <>
+      <span className="flex items-center gap-1.5 text-small font-semibold text-ink whitespace-nowrap">
+        {item.label}
+        {item.external && <ExternalLink size={10} className="text-ink-muted shrink-0" />}
+      </span>
+      <span className="text-label text-ink-muted whitespace-nowrap">{item.sub}</span>
+    </>
+  );
+
+  if (item.href) {
+    return (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex flex-col items-center gap-0.5 group hover:opacity-70 transition-opacity duration-200 px-10"
+      >
+        {content}
+      </a>
+    );
+  }
 
   return (
-    <section
-      ref={ref}
-      className="border-y border-border bg-surface"
-    >
-      <div className="container-width py-6">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-12"
-        >
-          {TRUST_ITEMS.map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 8 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{
-                duration: 0.4,
-                ease: "easeOut",
-                delay: i * 0.08,
-              }}
-            >
-              {item.href ? (
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-0.5 group"
-                >
-                  <span className="flex items-center gap-1 text-small font-semibold text-ink group-hover:text-primary transition-colors duration-200">
-                    {item.label}
-                    <ExternalLink size={10} className="text-ink-muted" />
-                  </span>
-                  <span className="text-label text-ink-muted">{item.sub}</span>
-                </a>
-              ) : (
-                <div className="flex flex-col items-center gap-0.5">
-                  <span className="text-small font-semibold text-ink">
-                    {item.label}
-                  </span>
-                  <span className="text-label text-ink-muted">{item.sub}</span>
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </motion.div>
+    <div className="flex flex-col items-center gap-0.5 px-10">
+      {content}
+    </div>
+  );
+}
+
+export function TrustBar() {
+  // Items are duplicated so the marquee loops seamlessly
+  const allItems = [...TRUST_ITEMS, ...TRUST_ITEMS];
+
+  return (
+    <section className="border-y border-border bg-surface overflow-hidden py-5">
+      <div
+        className="flex animate-marquee"
+        style={{ width: "max-content" }}
+      >
+        {allItems.map((item, i) => (
+          <div key={i} className="flex items-center">
+            <TrustItem item={item} />
+            {/* Separator dot between items */}
+            <span className="w-1 h-1 rounded-full bg-border shrink-0" aria-hidden />
+          </div>
+        ))}
       </div>
     </section>
   );

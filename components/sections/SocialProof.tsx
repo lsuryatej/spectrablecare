@@ -7,7 +7,7 @@ import { ExternalLink } from "lucide-react";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const KPIS = [
-  { number: "7", label: "Participants in alpha testing", sub: "Special school study" },
+  { number: "15", label: "Caretakers in beta testing", sub: "In clinics" },
   { number: "4", label: "Clinics agreed for pilots", sub: "Including 2 ABA centres" },
   { number: "1", label: "Peer-reviewed research paper", sub: "ICORD + CHI 2025" },
   { number: "2", label: "Awards at UW", sub: "Pitch + Marketing Strategy" },

@@ -17,7 +17,7 @@ export function CTABanner() {
     if (!email) return;
     // Real form submission would go here.
     // For now, mailto fallback keeps it functional without a backend.
-    window.location.href = `mailto:trisha.p@spectrablecare.com?subject=Early access request&body=Email: ${email}`;
+    window.location.href = `mailto:admin@spectrablecare.com?subject=Early access request&body=Email: ${email}`;
     setSubmitted(true);
   }
 
@@ -87,10 +87,10 @@ export function CTABanner() {
             >
               Or write directly:{" "}
               <a
-                href="mailto:trisha.p@spectrablecare.com"
+                href="mailto:admin@spectrablecare.com"
                 className="text-ink-inverse/60 hover:text-ink-inverse transition-colors duration-200"
               >
-                trisha.p@spectrablecare.com
+                admin@spectrablecare.com
               </a>
             </motion.p>
           </div>

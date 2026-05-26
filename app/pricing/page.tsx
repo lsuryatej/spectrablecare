@@ -216,7 +216,7 @@ export default function PricingPage() {
               Book a call
             </Link>
             <p className="text-label text-ink-muted text-center">
-              trisha.p@spectrablecare.com
+              admin@spectrablecare.com
             </p>
           </div>
         </div>

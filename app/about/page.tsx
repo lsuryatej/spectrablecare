@@ -36,17 +36,61 @@ const TEAM = [
   },
 ];
 
-function TeamCard({
-  member,
-}: {
-  member: (typeof TEAM)[number];
-}) {
+const MENTORS = [
+  {
+    name: "Dr. Mike Teodorescu",
+    role: "Mentor",
+    roleColor: "text-therapist bg-therapist-bg",
+    photo: "/team/mentor-mike.png",
+    credentials: [
+      "Assistant Professor, University of Washington",
+      "MIT Technology Review 35 Innovators Under 35 Europe",
+      "Co-Founder @ SurgiBox (TIME Best Inventions of 2023)",
+      "Harvard Business School, Harvard Computer Science degrees",
+    ],
+  },
+  {
+    name: "April Vian",
+    role: "Professional Mentor",
+    roleColor: "text-admin bg-admin-bg",
+    photo: "/team/mentor-april.png",
+    credentials: [
+      "CEO, Eastside ABA Therapy Centre",
+      "Founder, Bridging the Gap Social Benefit Corporation",
+      "Practicing Behavior Analyst for 15+ years",
+      "Specialized care for children with Autism, ADHD, and Neurodivergencies",
+    ],
+  },
+  {
+    name: "Dr. Shiwangee Purandare",
+    role: "Mentor",
+    roleColor: "text-therapist bg-therapist-bg",
+    photo: "/team/mentor-shiwangee.png",
+    credentials: [
+      "Director, SRCC Hospital Mumbai",
+      "Founder, Hariti Global Foundation",
+      "NeuroPhysiotherapist for 19 years",
+      "Specialized care and education for children with Autism and ADHD",
+    ],
+  },
+  {
+    name: "Manva Bhagwat",
+    role: "Advisor",
+    roleColor: "text-caregiver bg-caregiver-bg",
+    photo: "/team/mentor-manva.png",
+    credentials: [
+      "Founder, Manasvi Mental Health Services",
+      "Autism Behaviour Analyst & Clinical Psychologist",
+      "8+ years in Clinical Psychology and Special School programs",
+    ],
+  },
+];
+
+function TeamCard({ member }: { member: (typeof TEAM)[number] }) {
   return (
     <div
       className={`bg-surface rounded-2xl border shadow-card p-6 flex flex-col items-center text-center gap-4 ${
-        member.featured
-          ? "border-primary/30 shadow-card-hover"
-          : "border-border"
+        member.featured ? "border-primary/30 shadow-card-hover" : "border-border"
       }`}
     >
       <div
@@ -72,15 +116,52 @@ function TeamCard({
         </p>
         <p
           className={`mt-0.5 font-medium ${
-            member.featured
-              ? "text-small text-primary"
-              : "text-label text-ink-muted"
+            member.featured ? "text-small text-primary" : "text-label text-ink-muted"
           }`}
         >
           {member.title}
         </p>
       </div>
       <p className="text-small text-ink-muted leading-relaxed">{member.bio}</p>
+    </div>
+  );
+}
+
+function MentorCard({ mentor }: { mentor: (typeof MENTORS)[number] }) {
+  return (
+    <div className="flex flex-col items-center text-center gap-4">
+      {/* Photo */}
+      <div className="relative w-28 h-28 rounded-full overflow-hidden shrink-0 border-2 border-border shadow-card">
+        <Image
+          src={mentor.photo}
+          alt={mentor.name}
+          fill
+          className="object-cover"
+          sizes="112px"
+        />
+      </div>
+
+      {/* Name + role */}
+      <div>
+        <p className="text-small font-semibold text-ink leading-tight">
+          {mentor.name}
+        </p>
+        <span
+          className={`inline-flex items-center mt-1.5 px-2.5 py-0.5 rounded-full text-label font-semibold uppercase tracking-widest ${mentor.roleColor}`}
+        >
+          {mentor.role}
+        </span>
+      </div>
+
+      {/* Credentials */}
+      <ul className="flex flex-col gap-1.5 text-left w-full">
+        {mentor.credentials.map((item) => (
+          <li key={item} className="flex items-start gap-2">
+            <span className="text-ink-muted mt-1 shrink-0 text-label leading-none">·</span>
+            <span className="text-small text-ink-muted leading-snug">{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -101,7 +182,6 @@ export default function AboutPage() {
 
         {/* Founder story + sidebar */}
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-16 items-start mb-20">
-          {/* Story */}
           <div>
             <p className="text-label font-semibold uppercase tracking-widest text-primary mb-4">
               Why we built this
@@ -143,11 +223,10 @@ export default function AboutPage() {
             <div className="mt-10 pt-8 border-t border-border">
               <p className="text-small font-semibold text-ink">Trisha Pawar</p>
               <p className="text-small text-ink-muted">CEO & Co-founder, SpectrAble</p>
-              <p className="text-small text-ink-muted">Kokum Assist LLP</p>
+              <p className="text-small text-ink-muted">Spectrable Inc.</p>
             </div>
           </div>
 
-          {/* Sidebar */}
           <div className="flex flex-col gap-6 lg:pt-36">
             <div className="bg-surface rounded-2xl border border-border p-6 shadow-card">
               <p className="text-label font-semibold uppercase tracking-widest text-primary mb-3">
@@ -168,7 +247,7 @@ export default function AboutPage() {
                 {[
                   "1st Prize, Startup Pitch — UW Information School",
                   "Best Marketing Strategy — UW SEBA",
-                  "Google Cloud for Startups program member",
+                  "MVP tested at ABA clinics across the US",
                   "Research published in Springer (ICORD 2025)",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
@@ -182,7 +261,7 @@ export default function AboutPage() {
         </div>
 
         {/* Team section */}
-        <div className="mb-16">
+        <div className="mb-20">
           <p className="text-label font-semibold uppercase tracking-widest text-primary mb-3">
             The team
           </p>
@@ -190,23 +269,38 @@ export default function AboutPage() {
             The people building SpectrAble.
           </h2>
 
-          {/* Row 1: Akshay + Priti */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <TeamCard member={akshay} />
             <TeamCard member={priti} />
           </div>
-
-          {/* Row 2: Trisha (CEO, centered) */}
           <div className="flex justify-center mb-6">
             <div className="w-full sm:w-1/2">
               <TeamCard member={trisha} />
             </div>
           </div>
-
-          {/* Row 3: Sathwika + Khushi */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <TeamCard member={sathwika} />
             <TeamCard member={khushi} />
+          </div>
+        </div>
+
+        {/* Mentors section */}
+        <div className="mb-20">
+          <p className="text-label font-semibold uppercase tracking-widest text-primary mb-3">
+            Our mentors
+          </p>
+          <h2 className="font-serif text-h2 text-ink mb-3">
+            Guided by people who have done it.
+          </h2>
+          <p className="text-body text-ink-muted mb-10 max-w-prose-tight">
+            Clinicians, researchers, and founders who have spent careers working
+            at the intersection of autism care and technology.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+            {MENTORS.map((mentor) => (
+              <MentorCard key={mentor.name} mentor={mentor} />
+            ))}
           </div>
         </div>
 
