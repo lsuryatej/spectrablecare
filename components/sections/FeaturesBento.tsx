@@ -10,83 +10,56 @@ import {
   CheckCircle,
   Target,
   Shield,
-  Bell,
-  BarChart2,
-  Mic,
 } from "lucide-react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const FEATURES = [
   {
-    id: "journaling",
+    id: "capture",
     icon: FileText,
-    title: "Multimodal journaling",
-    desc: "Log behaviors through text, audio recordings, or short video clips — whichever is easiest in the moment.",
+    title: "Capture, any format",
+    desc: "The best log is the one that actually gets written. Families document in whatever way fits the moment.",
     persona: "caregiver",
     size: "large",
   },
   {
-    id: "suggestions",
-    icon: Mic,
-    title: "Daily activity suggestions",
-    desc: "AI reads your logs and surfaces activities your therapist has approved.",
-    persona: "caregiver",
-    size: "small",
-  },
-  {
-    id: "trends",
+    id: "intelligence",
     icon: TrendingUp,
-    title: "Trend charts",
-    desc: "Emotional and behavioral patterns across days, weeks, and months.",
+    title: "Intelligence between sessions",
+    desc: "The platform does the analysis. Clinicians get the insight.",
     persona: "therapist",
     size: "small",
   },
   {
-    id: "sos",
+    id: "urgency",
     icon: AlertTriangle,
-    title: "SOS alert dashboard",
-    desc: "One tap from a caregiver triggers priority routing to the therapist. Urgent situations don't wait until Monday.",
+    title: "When it can't wait",
+    desc: "Critical moments don't get queued. They get acted on.",
     persona: "alert",
     size: "medium",
   },
   {
-    id: "feedback",
+    id: "coordination",
     icon: CheckCircle,
-    title: "Therapist feedback loop",
-    desc: "Approve logs, leave comments, and tailor AI suggestions without scheduling a call.",
+    title: "Therapist stays current",
+    desc: "Home data reaches the clinic in real time. Not at the next appointment.",
     persona: "therapist",
     size: "small",
   },
   {
-    id: "goals",
+    id: "progress",
     icon: Target,
-    title: "Smart goal tracker",
-    desc: "Set therapy targets and track progress against them over time.",
+    title: "Progress over time",
+    desc: "Goals tracked against reality. Not against a fixed schedule.",
     persona: "therapist",
     size: "small",
   },
   {
-    id: "access",
+    id: "teams",
     icon: Shield,
-    title: "Role-based access",
-    desc: "Caregivers, therapists, and clinic staff each see exactly what they need. Nothing more.",
-    persona: "admin",
-    size: "small",
-  },
-  {
-    id: "notifications",
-    icon: Bell,
-    title: "Real-time notifications",
-    desc: "Stay updated when logs are reviewed, activities are approved, or alerts are sent.",
-    persona: "caregiver",
-    size: "small",
-  },
-  {
-    id: "analytics",
-    icon: BarChart2,
-    title: "Admin analytics panel",
-    desc: "Clinic-wide usage, therapist activity, and compliance reporting in one place.",
+    title: "Built for teams",
+    desc: "Roles, permissions, and reporting structured for the way clinics actually work.",
     persona: "admin",
     size: "small",
   },
@@ -114,10 +87,10 @@ export function FeaturesBento() {
           className="mb-12"
         >
           <p className="text-label font-semibold uppercase tracking-widest text-primary mb-3">
-            Platform features
+            What we built
           </p>
           <h2 className="font-serif text-h2 text-ink max-w-xl">
-            Everything the circle of care needs.
+            Care that doesn't stop when the session ends.
           </h2>
         </motion.div>
 
@@ -187,7 +160,7 @@ export function FeaturesBento() {
                 {/* Large card extra content */}
                 {isLarge && (
                   <div className="mt-2 grid grid-cols-3 gap-2">
-                    {["Text entry", "Voice memo", "Short video"].map((mode) => (
+                    {["Any format", "Any moment", "Nothing lost"].map((mode) => (
                       <div
                         key={mode}
                         className="px-3 py-2 rounded-xl bg-caregiver-bg border border-caregiver/10 text-center"
