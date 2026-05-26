@@ -19,8 +19,8 @@ const LEGAL_LINKS = [
 export function Footer() {
   return (
     <footer className="bg-dark text-ink-inverse">
-      <div className="container-width py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
+      <div className="container-width py-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6">
           {/* Brand column */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
@@ -122,9 +122,9 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/8 mt-12 pt-8">
+        <div className="border-t border-white/8 mt-8 pt-6">
           {/* Trust badge row */}
-          <div className="flex flex-wrap items-center gap-3 mb-6">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
             {["MVP Tested at ABA Clinics", "HIPAA-Compliant", "ICORD 2025", "Therapist-Approved"].map((badge) => (
               <span
                 key={badge}
