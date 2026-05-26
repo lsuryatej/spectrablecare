@@ -12,7 +12,7 @@ export default function RefundPolicyPage() {
         </div>
 
         <p className="text-small text-ink-muted leading-relaxed mb-8">
-          SpectrAble, operated under Kokum Assist LLP, provides a subscription-based digital platform for
+          SpectrAble, operated under Spectrable Inc., provides a subscription-based digital platform for
           caregivers, therapists, and clinics. This policy governs cancellations and refunds for payments
           made through our platform.
         </p>
@@ -81,8 +81,8 @@ export default function RefundPolicyPage() {
             <div className="flex flex-col gap-2">
               <p>
                 Email:{" "}
-                <a href="mailto:kokumassist@kokumassist.com" className="text-primary hover:text-primary-hover transition-colors">
-                  kokumassist@kokumassist.com
+                <a href="mailto:admin@spectrablecare.com" className="text-primary hover:text-primary-hover transition-colors">
+                  admin@spectrablecare.com
                 </a>
               </p>
               <p>Phone: +91-XXXXXXXXXX</p>

@@ -33,7 +33,7 @@ export default function TermsPage() {
           <section>
             <h2 className="font-serif text-h4 text-ink mb-3">1. Applicability</h2>
             <p>
-              The Company, Kokum Assist LLP (&ldquo;Company&rdquo; or &ldquo;We&rdquo;), with a registered address
+              The Company, Spectrable Inc. (&ldquo;Company&rdquo; or &ldquo;We&rdquo;), with a registered address
               at 601 Gopal Vishnu CHS Ltd, Mahant Road, Opposite Ruia School, Vile Parle (East),
               Mumbai-400057, Maharashtra, India, operates under the brand name Spectrable and provides a distinct
               feature with the Spectrable AI Chatbot for better healthcare management.
@@ -96,7 +96,7 @@ export default function TermsPage() {
               {[
                 {
                   term: "Company, We, Us, or Our",
-                  def: "Refers to Kokum Assist LLP, operating under the Spectrable brand.",
+                  def: "Refers to Spectrable Inc., operating under the Spectrable brand.",
                 },
                 {
                   term: "Platform",
@@ -125,8 +125,8 @@ export default function TermsPage() {
             <h2 className="font-serif text-h4 text-ink mb-3">Contact</h2>
             <p>
               For questions about these Terms, contact us at{" "}
-              <a href="mailto:kokumassist@kokumassist.com" className="text-primary hover:text-primary-hover transition-colors">
-                kokumassist@kokumassist.com
+              <a href="mailto:admin@spectrablecare.com" className="text-primary hover:text-primary-hover transition-colors">
+                admin@spectrablecare.com
               </a>
               .
             </p>

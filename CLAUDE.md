@@ -44,9 +44,9 @@ Full spec at `docs/design-brief.md`. Key rules:
 - Headlines under 10 words. Sentence case only.
 
 ## Brand
-- Contact: trisha.p@spectrablecare.com
-- Legal: Kokum Assist LLP, LLPIN: ACL-1013
-- Trust signals: Google Cloud for Startups, HIPAA-Compliant, ICORD 2025, Therapist-Approved, 1st Prize UW Startup Pitch
+- Contact: admin@spectrablecare.com
+- Legal: Spectrable Inc., a Delaware C-Corporation
+- Trust signals: MVP Tested at ABA Clinics, HIPAA-Compliant, ICORD 2025, Therapist-Approved, 1st Prize UW Startup Pitch
 
 ## Build order (current progress)
 Completed:

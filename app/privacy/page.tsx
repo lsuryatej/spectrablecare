@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-serif text-h4 text-ink mb-3">Introduction</h2>
             <p>
-              Kokum Assist LLP (&ldquo;Company&rdquo; or &ldquo;We&rdquo;), with a registered address at 601 Gopal
+              Spectrable Inc. (&ldquo;Company&rdquo; or &ldquo;We&rdquo;), with a registered address at 601 Gopal
               Vishnu CHS Ltd, Mahant Road, Opposite Ruia School, Vile Parle (East), Vile Parle Police Station,
               Mumbai-400057, Maharashtra, India, operates under the brand name Spectrable and provides a distinct
               feature with the Spectrable AI Chatbot for better healthcare management. We respect your privacy and
@@ -204,8 +204,8 @@ export default function PrivacyPage() {
             <h2 className="font-serif text-h4 text-ink mb-3">Contact Information</h2>
             <p>
               To ask questions or comment about this privacy policy, contact us at:{" "}
-              <a href="mailto:kokumassist@kokumassist.com" className="text-primary hover:text-primary-hover transition-colors">
-                kokumassist@kokumassist.com
+              <a href="mailto:admin@spectrablecare.com" className="text-primary hover:text-primary-hover transition-colors">
+                admin@spectrablecare.com
               </a>
             </p>
           </section>

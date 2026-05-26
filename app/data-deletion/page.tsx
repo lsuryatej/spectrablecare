@@ -32,10 +32,10 @@ export default function DataDeletionPage() {
                 Send an email request to:
               </p>
               <a
-                href="mailto:kokumassist@gmail.com"
+                href="mailto:admin@spectrablecare.com"
                 className="text-small font-semibold text-primary block mb-4"
               >
-                kokumassist@gmail.com
+                admin@spectrablecare.com
               </a>
               <p className="text-small text-ink-muted mb-2">
                 Include the following in your message:
@@ -111,13 +111,13 @@ export default function DataDeletionPage() {
 
           <div className="flex items-center justify-between pt-4 border-t border-border">
             <a
-              href="mailto:kokumassist@gmail.com?subject=Account deletion request"
+              href="mailto:admin@spectrablecare.com?subject=Account deletion request"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cta text-white text-small font-semibold hover:bg-cta-hover transition-colors"
             >
               Email to request deletion
             </a>
             <p className="text-small text-ink-muted">
-              Developer: Kokum Assist LLP
+              Developer: Spectrable Inc.
             </p>
           </div>
         </div>
