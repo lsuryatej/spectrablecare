@@ -10,7 +10,9 @@ const QUICK_LINKS = [
 
 const LEGAL_LINKS = [
   { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Use", href: "/terms" },
+  { label: "Terms & Conditions", href: "/terms" },
+  { label: "Cancellation & Refunds", href: "/refund-policy" },
+  { label: "Shipping Policy", href: "/shipping-policy" },
   { label: "Data Deletion", href: "/data-deletion" },
 ];
 
@@ -76,10 +78,10 @@ export function Footer() {
               Contact
             </p>
             <a
-              href="mailto:trisha.p@spectrablecare.com"
+              href="mailto:admin@spectrablecare.com"
               className="text-small text-ink-inverse/70 hover:text-ink-inverse transition-colors duration-200 block mb-4"
             >
-              trisha.p@spectrablecare.com
+              admin@spectrablecare.com
             </a>
             <div className="flex items-center gap-3 mt-4">
               <a
@@ -123,7 +125,7 @@ export function Footer() {
         <div className="border-t border-white/8 mt-12 pt-8">
           {/* Trust badge row */}
           <div className="flex flex-wrap items-center gap-3 mb-6">
-            {["Google Cloud for Startups", "HIPAA-Compliant", "ICORD 2025", "Therapist-Approved"].map((badge) => (
+            {["MVP Tested at ABA Clinics", "HIPAA-Compliant", "ICORD 2025", "Therapist-Approved"].map((badge) => (
               <span
                 key={badge}
                 className="inline-flex items-center px-3 py-1 rounded-full border border-white/10 text-label text-ink-inverse/50"
@@ -135,10 +137,10 @@ export function Footer() {
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 text-small text-ink-muted">
             <p>
-              &copy; 2025 SpectrAble by Kokum Assist LLP. All rights reserved.
+              &copy; 2025 SpectrAble. All rights reserved.
             </p>
             <p>
-              Legal name: Kokum Assist LLP &nbsp;&middot;&nbsp; LLPIN: ACL-1013
+              Spectrable Inc., a Delaware C-Corporation
             </p>
           </div>
         </div>

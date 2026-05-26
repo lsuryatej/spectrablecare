@@ -13,8 +13,8 @@ const TRUST_ITEMS = [
     external: true,
   },
   {
-    label: "Google Cloud for Startups",
-    sub: "Program member",
+    label: "MVP Tested at ABA Clinics",
+    sub: "Beta validated",
     href: null,
   },
   {

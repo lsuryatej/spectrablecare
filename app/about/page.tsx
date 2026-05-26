@@ -143,7 +143,7 @@ export default function AboutPage() {
             <div className="mt-10 pt-8 border-t border-border">
               <p className="text-small font-semibold text-ink">Trisha Pawar</p>
               <p className="text-small text-ink-muted">CEO & Co-founder, SpectrAble</p>
-              <p className="text-small text-ink-muted">Kokum Assist LLP</p>
+              <p className="text-small text-ink-muted">Spectrable Inc.</p>
             </div>
           </div>
 
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 {[
                   "1st Prize, Startup Pitch — UW Information School",
                   "Best Marketing Strategy — UW SEBA",
-                  "Google Cloud for Startups program member",
+                  "MVP tested at ABA clinics across the US",
                   "Research published in Springer (ICORD 2025)",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">

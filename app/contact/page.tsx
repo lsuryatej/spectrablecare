@@ -16,7 +16,7 @@ export default function ContactPage() {
     const name = data.get("name");
     const email = data.get("email");
     const message = data.get("message");
-    window.location.href = `mailto:trisha.p@spectrablecare.com?subject=SpectrAble contact: ${role}&body=Name: ${name}%0AEmail: ${email}%0ARole: ${role}%0A%0A${message}`;
+    window.location.href = `mailto:admin@spectrablecare.com?subject=SpectrAble contact: ${role}&body=Name: ${name}%0AEmail: ${email}%0ARole: ${role}%0A%0A${message}`;
     setSubmitted(true);
   }
 
@@ -38,10 +38,10 @@ export default function ContactPage() {
               like to hear from you.
             </p>
             <a
-              href="mailto:trisha.p@spectrablecare.com"
+              href="mailto:admin@spectrablecare.com"
               className="text-small font-semibold text-primary hover:text-primary-hover transition-colors"
             >
-              trisha.p@spectrablecare.com
+              admin@spectrablecare.com
             </a>
           </div>
 

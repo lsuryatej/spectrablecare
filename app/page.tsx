@@ -5,7 +5,6 @@ import { PersonaCards } from "@/components/sections/PersonaCards";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { FeaturesBento } from "@/components/sections/FeaturesBento";
-import { ScreenshotPlaceholder } from "@/components/sections/ScreenshotPlaceholder";
 import { FounderQuote } from "@/components/sections/FounderQuote";
 import { CTABanner } from "@/components/sections/CTABanner";
 
@@ -19,8 +18,7 @@ export default function Home() {
       <SocialProof />
       <HowItWorks />
       <FeaturesBento />
-      <ScreenshotPlaceholder />
-      <FounderQuote />
+<FounderQuote />
       <CTABanner />
     </>
   );
