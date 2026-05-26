@@ -79,10 +79,31 @@ export function Footer() {
             </p>
             <a
               href="mailto:admin@spectrablecare.com"
-              className="text-small text-ink-inverse/70 hover:text-ink-inverse transition-colors duration-200 block mb-4"
+              className="text-small text-ink-inverse/70 hover:text-ink-inverse transition-colors duration-200 block mb-5"
             >
               admin@spectrablecare.com
             </a>
+            <p className="text-label font-semibold uppercase tracking-widest text-ink-muted mb-3">
+              Download
+            </p>
+            <div className="flex flex-col gap-2 mb-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.corazortechnology.kokumcaretaker"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-small text-ink-inverse/70 hover:text-ink-inverse transition-colors duration-200"
+              >
+                Kokum Caretaker &rarr;
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.corazortechnology.kokumtherapist"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-small text-ink-inverse/70 hover:text-ink-inverse transition-colors duration-200"
+              >
+                Kokum Therapist &rarr;
+              </a>
+            </div>
             <div className="flex items-center gap-3 mt-4">
               <a
                 href="https://linkedin.com"

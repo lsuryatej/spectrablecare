@@ -1,5 +1,15 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
+function PlayStoreLogo() {
+  return (
+    <svg width="18" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.18 23.76c.38.22.82.27 1.24.15L16.1 12 12 7.9 3.18 23.76z" fill="#EA4335"/>
+      <path d="M20.82 10.33l-3.1-1.77L13.41 12l4.31 4.31 3.1-1.77a1.97 1.97 0 0 0 0-4.21z" fill="#FBBC04"/>
+      <path d="M4.42.09A1.97 1.97 0 0 0 3.18.24v23.52c.38.22.82.27 1.24.15L16.1 12 4.42.09z" fill="#4285F4"/>
+      <path d="M12 12l4.1-4.1L4.42.09A1.97 1.97 0 0 0 3.18.24L12 12z" fill="#34A853"/>
+    </svg>
+  );
+}
 
 export default function HowItWorksPage() {
   return (
@@ -75,6 +85,7 @@ export default function HowItWorksPage() {
             Download the app for your role.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Caretaker */}
             <div className="bg-dark-surface rounded-2xl border border-white/10 p-6 flex flex-col gap-3">
               <p className="text-small font-semibold text-ink-inverse">
                 Kokum Caretaker
@@ -83,14 +94,20 @@ export default function HowItWorksPage() {
                 For caregivers. Log daily behavior, receive activity
                 suggestions, and send SOS alerts.
               </p>
-              <Link
-                href="#"
-                className="inline-flex items-center gap-2 text-small font-semibold text-cta hover:text-cta-hover transition-colors"
+              <a
+                href="https://play.google.com/store/apps/details?id=com.corazortechnology.kokumcaretaker"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 mt-1 px-4 py-2.5 rounded-xl bg-white/8 border border-white/10 hover:bg-white/12 transition-colors duration-200 w-fit"
               >
-                Find on App Store
-                <ArrowRight size={13} />
-              </Link>
+                <PlayStoreLogo />
+                <span className="flex flex-col leading-none">
+                  <span className="text-[9px] text-ink-inverse/50 uppercase tracking-widest">Get it on</span>
+                  <span className="text-small font-semibold text-ink-inverse mt-0.5">Google Play</span>
+                </span>
+              </a>
             </div>
+            {/* Therapist */}
             <div className="bg-dark-surface rounded-2xl border border-white/10 p-6 flex flex-col gap-3">
               <p className="text-small font-semibold text-ink-inverse">
                 Kokum Therapist
@@ -99,13 +116,18 @@ export default function HowItWorksPage() {
                 For therapists. Review behavior logs, approve activities, and
                 stay connected with caregivers.
               </p>
-              <Link
-                href="#"
-                className="inline-flex items-center gap-2 text-small font-semibold text-cta hover:text-cta-hover transition-colors"
+              <a
+                href="https://play.google.com/store/apps/details?id=com.corazortechnology.kokumtherapist"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 mt-1 px-4 py-2.5 rounded-xl bg-white/8 border border-white/10 hover:bg-white/12 transition-colors duration-200 w-fit"
               >
-                Find on App Store
-                <ArrowRight size={13} />
-              </Link>
+                <PlayStoreLogo />
+                <span className="flex flex-col leading-none">
+                  <span className="text-[9px] text-ink-inverse/50 uppercase tracking-widest">Get it on</span>
+                  <span className="text-small font-semibold text-ink-inverse mt-0.5">Google Play</span>
+                </span>
+              </a>
             </div>
           </div>
         </div>
